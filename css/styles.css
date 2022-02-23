@@ -392,21 +392,16 @@ a .accent.black {
   align-items: center;
   width: 44px;
   height: 44px;
+
+  fill: #afb1b8;
+
   border-radius: 50%;
 }
 
 .social-team-link:hover,
 .social-team-link:focus {
   background-color: var(--accent-color);
-}
-
-.social-team-link:hover .social-team-icon,
-.social-team-link:focus .social-team-icon {
   fill: #ffffff;
-}
-
-.social-team-icon {
-  fill: #afb1b8;
 }
 
 /* clients */
@@ -522,8 +517,12 @@ a .accent.black {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 44px;
   height: 44px;
+
+  fill: var(--secondary-text-color);
+
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
@@ -531,10 +530,6 @@ a .accent.black {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
-}
-
-.footer-social-icon {
-  fill: var(--secondary-text-color);
 }
 
 /* ------------------------------------------- */
@@ -605,8 +600,10 @@ a .accent.black {
   margin-bottom: var(--list-gap);
 
   text-align: center;
+}
 
-  background-color: var(--primary-bg-color);
+.example-item:hover,
+.example-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
