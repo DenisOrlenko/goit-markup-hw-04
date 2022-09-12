@@ -180,9 +180,7 @@ h3 {
 
 .contact {
   display: flex;
-  flex-wrap: wrap;
   gap: 50px;
-
   margin-left: auto;
 }
 
@@ -217,9 +215,6 @@ h3 {
 /* ------------------HERO-------------------- */
 /* фон Героя */
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
