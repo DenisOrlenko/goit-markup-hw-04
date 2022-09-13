@@ -6,11 +6,17 @@
   --title-text-color: #212121;
   --logo-black-color: #000000;
   --accent-color: #2196f3;
-  --hero-button-background-color: #188CE8;
+  --hero-overlay: rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4);
+  --hero-bg-color: #c4c4c4
+  --hero-button-bg-color: #188CE8;
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
 
+  /* svg */
+  --primary-svg-fill: #afb1b8;
+  --footer-svg-bg-color: rgba(255, 255, 255, 0.1);
   /* Decoration */
   --border-under-header: #ececec;
   --border-under-item: #eeeeee;
@@ -214,11 +220,15 @@ h3 {
 .hero {
   max-width: 1600px;
   padding-top: 200px;
-
   padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  background-image: linear-gradient(var(--hero-overlay)),
       url('../images/main/hero/hero-bg.jpg');
-  background-color: #c4c4c4;
+  background-color: var(--hero-bg-color);
   background-position: center;
   /* background-repeat: no-repeat;
   background-size: cover; */
@@ -243,18 +253,18 @@ h3 {
 
 /* button применение формления к кнопке */
 .hero-button {
-  display: block;
   padding: 10px 32px;
-  margin-left: auto;
-  margin-right: auto;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
+
   cursor: pointer;
-  border-style: none;
+  border-color: transparent;
   box-shadow: var(--shadow-hero-button);
   border-radius: 4px;
 }
@@ -262,8 +272,7 @@ h3 {
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--hero-button-background-color);
-  box-shadow: var(--shadow-hero-button);
+  background-color: var(--hero-button-bg-color);
 }
 
 /* --------------------SECTION-2------------------- */
@@ -390,7 +399,7 @@ h3 {
   width: 44px;
   height: 44px;
 
-  fill: #afb1b8;
+  fill: var(--primary-svg-fill);
 
   border-radius: 50%;
 }
@@ -398,7 +407,7 @@ h3 {
 .social-item > .social-link:hover,
 .social-item > .social-link:focus {
   background-color: var(--accent-color);
-  fill: #ffffff;
+  fill: var(--primary-bg-color);
 }
 
 /* client */
@@ -414,9 +423,9 @@ h3 {
   width: 170px;
   height: 92px;
 
-  fill: #afb1b8;
+  fill: var(--primary-svg-fill);
 
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--primary-svg-fill);
   border-radius: 4px;
 }
 
@@ -441,10 +450,6 @@ h3 {
   align-items: baseline;
 }
 
-.page-footer .logo {
-  margin-bottom: 20px;
-}
-
 /* Studio - белый цвет */
 .logo .accent.white {
   color: var(--secondary-text-color);
@@ -452,6 +457,7 @@ h3 {
 
 .address-list {
   min-width: 231px;
+  margin-top: 20px;
 }
 
 .city-item {
@@ -506,8 +512,8 @@ h3 {
 }
 
 .social-thumb .social-link {
-  fill: var(--primary-bg-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--secondary-text-color);
+  background-color: var(--footer-svg-bg-color);
 }
 
 
